@@ -1,24 +1,37 @@
 import React, { Component } from 'react';
 import p5 from 'p5';
-import './wrapper.css';
+import './canvas.css';
 class Sketch extends Component {
   componentDidMount() {
     this.canvas = new p5(this.sketch, this.wrapper);
   }
 
+
   sketch = (p) => {
+    var x = 10;
+    var y = 100;
+
+    var xupdate = 2;
+    var yupdate = 1;
+
     p.setup = () => {
-      p.createCanvas(800, 400, p.WEBGL);
-      p.angleMode(p.DEGREES);
+      p.createCanvas(520, 380);
     };
-    let rotation = 0;
+
     p.draw = () => {
-      p.background('gray');
-      p.stroke('white');
-      p.fill(p.mouseY, 0, 0);
-      p.rotateY(rotation);
-      rotation += p.mouseX / 30;
-      p.box(120, 60, 30);
+      p.background(100)
+     p.rect(x, y, 50, 50);
+     x += xupdate;
+     y += yupdate;
+ 
+     if (x > p.width || x <= 0) {
+       xupdate *= -1;
+     }
+   
+     if (y > p.height || y <= 0) {
+       yupdate *= -1;
+     }
+ 
     };
  
   };
