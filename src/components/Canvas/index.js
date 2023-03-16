@@ -13,17 +13,22 @@ class Sketch extends Component {
 
     var xupdate = 2;
     var yupdate = 1;
-
+    let s = "Pick a game from the stickers at the side!";
     p.setup = () => {
       p.createCanvas(520, 380);
     };
-
+    
+ 
+    
     p.draw = () => {
-      p.background(100)
+      p.background(82, 235, 138)
      p.rect(x, y, 50, 50);
      x += xupdate;
      y += yupdate;
  
+     p.textSize(26)
+     p.fill(255);
+     p.text(s, 20, 160, 700, 100);
      if (x > p.width || x <= 0) {
        xupdate *= -1;
      }
