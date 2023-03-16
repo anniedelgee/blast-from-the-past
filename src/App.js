@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import Canvas from "./components/Canvas";
-import Canvas2 from "./components/Canvas2";
+import CatchGame from "./components/CatchGame";
 import Dial from "./components/Dial/dial";
 import Computer from "./components/Computer/computer";
 import './App.css';
@@ -57,8 +57,8 @@ function App() {
     <div>
   
       {showScreenSaver && <Canvas />}
-      {!showWrapper2 && <Canvas2 />}
-      {!showWrapper3 && <Canvas2 />}
+      {!showWrapper2 && <CatchGame />}
+      {!showWrapper3 && <CatchGame />}
       <Computer></Computer>
       <Dial handleClick={handleWrapperClick} />
     </div>
