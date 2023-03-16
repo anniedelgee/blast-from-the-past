@@ -15,7 +15,8 @@ class Sketch extends Component {
     var yupdate = 1;
     let s = "Pick a game from the stickers at the side!";
     p.setup = () => {
-      p.createCanvas(520, 380);
+      // p.createCanvas(520, 380);
+      p.createCanvas(300, 210);
     };
     
  
