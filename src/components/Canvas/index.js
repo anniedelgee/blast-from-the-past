@@ -44,7 +44,7 @@ class Sketch extends Component {
   render() {
     return (
       <div class = "myclass" ref={(wrapper) => (this.wrapper = wrapper)}>
-        {/* any additional React components can go here */}
+        {}
       </div>
     );
   }
