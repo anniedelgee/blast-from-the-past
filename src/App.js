@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import Canvas from "./components/Canvas";
 import CatchGame from "./components/CatchGame";
-import Dial from "./components/Dial/dial";
+import DialOne from "./components/DialOne";
+import DialTwo from "./components/DialTwo";
 import Computer from "./components/Computer/computer";
 import './App.css';
 
@@ -12,44 +13,50 @@ let ThirdGameShown = false;
 
 
 function App() {
-  const [showScreenSaver, setShowWrapper] = useState(true);
-  const [showWrapper2, setShowWrapper2] = useState(true);
+  const [showScreenSaver, setShowScreen] = useState(true);
+  const [showSecondGame, setSecondGame] = useState(true);
   const [showWrapper3, setShowWrapper3] = useState(true);
+
+
+  const button1Click = () => {
+    if(ScreenSaverShown == true)
+    {
+      return;
+    }
+    else
+    {
+      if(SecondGameShown == true)
+      {
+        setShowScreen(!showScreenSaver);
+        setSecondGame(!showSecondGame);
+        ScreenSaverShown = true;
+        SecondGameShown = false;
+        return
+      }
+    }
+  }
+  const button2Click = () => {
+    if(SecondGameShown == true)
+    {
+      return;
+    }
+    else
+    {
+      if(ScreenSaverShown == true)
+      {
+        setShowScreen(!showScreenSaver);
+        setSecondGame(!showSecondGame);
+        SecondGameShown = true;
+        ScreenSaverShown = false;
+        return
+      }
+    }
+  }
 
  
 
-  const handleWrapperClick = () => {
-    if(ScreenSaverShown == true)
-    {
-      setShowWrapper(!showScreenSaver);
-      setShowWrapper2(!showWrapper2);
-      ScreenSaverShown = false;
-      SecondGameShown = true;
-      console.log("1");
-      return;
-      
-    }
-    if(SecondGameShown == true)
-    {
-      setShowWrapper2(!showWrapper2);
-      setShowWrapper3(!showWrapper3);
-      SecondGameShown = false;
-      ThirdGameShown = true;
-      console.log("2");
-      return;
-    }
-    if(ThirdGameShown == true)
-    {
-      setShowWrapper3(!showWrapper3);
-      setShowWrapper(!showScreenSaver);
-      ThirdGameShown = false;
-      ScreenSaverShown = true;
-      console.log("3");
-      return;
-    }
-    
 
-  };
+
 
 
 
@@ -57,10 +64,14 @@ function App() {
     <div>
   
       {showScreenSaver && <Canvas/>}
-      {!showWrapper2 && <CatchGame />}
+      {!showSecondGame && <CatchGame />}
       {!showWrapper3 && <CatchGame />}
       <Computer></Computer>
-      <Dial handleClick={handleWrapperClick} />
+
+      <DialOne handleClick={button1Click} />
+
+      <DialTwo handleClick={button2Click} />
+  
     </div>
   );
 }
