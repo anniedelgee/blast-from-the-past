@@ -7,8 +7,8 @@ import Computer from "./components/Computer/computer";
 import './App.css';
 
 let ScreenSaverShown = true;
-let SecondGameShown = true;
-let ThirdGameShown = true;
+let SecondGameShown = false;
+let ThirdGameShown = false;
 
 
 function App() {
@@ -56,7 +56,7 @@ function App() {
   return (
     <div>
   
-      {showScreenSaver && <Canvas />}
+      {showScreenSaver && <Canvas/>}
       {!showWrapper2 && <CatchGame />}
       {!showWrapper3 && <CatchGame />}
       <Computer></Computer>

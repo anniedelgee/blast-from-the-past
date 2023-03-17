@@ -5,6 +5,7 @@
    position: fixed;
    top: 50%;
    left: 50%;
+   
    transform: translate(-53%, -95%);
    z-index: 10;
 }

@@ -2,29 +2,42 @@ import React, { Component } from 'react';
 import p5 from 'p5';
 import './index.css';
 class Sketch extends Component {
+  
   componentDidMount() {
     this.canvas = new p5(this.sketch, this.wrapper);
   }
 
-  
+ 
   sketch = (p) => {
     let screen = 0;
     let y=-20;
     let x=200;
     let speed = 2;
     let score= 0;
+    let timer = 5;
 
     p.setup = () => {
       p.createCanvas(520, 380);
     };
     p.draw = () => {
-      if(screen == 0){
-        startScreen()
-      }else if(screen == 1){
-        gameOn()
-      }else if(screen==2){
-        endScreen()
-      }	
+      p.background(220);
+      p.textAlign(p.CENTER, p.CENTER);
+      p.textSize(26);
+      p.text(timer, p.width/2, p.height/2);
+      if (p.frameCount % 60 == 0 && timer > 0) 
+      { 
+        timer --;
+      }
+      if (timer == 0) {
+        if(screen == 0){
+          startScreen()
+        }else if(screen == 1){
+          gameOn()
+        }else if(screen==2){
+          endScreen()
+        }	
+      }
+
     };
 
 function startScreen(){
@@ -42,7 +55,7 @@ p.background(0)
 p.text("score = " + score, 30,20)
 p.ellipse(x,y,20,20)
 p.rectMode(p.CENTER)
-p.rect(p.mouseX,p.height-10,50,30)
+p.rect(p.mouseX,p.height-10,p.width / 4,30)
 y+= speed;
 if(y>p.height){
   screen =2
