@@ -1,6 +1,7 @@
 import React from 'react';
-import './dial.css';
-function Dial(props) {
+import './index.css';
+
+function DialOne(props) {
   return (
     <div className="dialImage" onClick={props.handleClick}>
       {/* Add your Dial component code here */}
@@ -8,4 +9,4 @@ function Dial(props) {
   );
 }
 
-export default Dial;
+export default DialOne;

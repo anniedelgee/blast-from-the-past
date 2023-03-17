@@ -1,5 +1,5 @@
-.dialImage {
-  background-image: url("/public/dial.png");
+.iconimage {
+  background-image: url(/public/coinicon.png);
   background-size: cover;
   background-position: center;
   width: 100px;
@@ -7,5 +7,5 @@
   border: none;
   cursor: pointer;
   position: absolute;
-  z-index: 10;
+  left: 100px;
 }
