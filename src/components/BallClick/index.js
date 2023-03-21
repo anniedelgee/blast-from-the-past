@@ -89,10 +89,10 @@ function gameOver(){
   p.textSize(30);
 	p.text("Score: " + score,p.width/2,140);
 	p.text("Game over click to play again",p.width/2,300);
-	
+
 	if(p.mouseIsPressed){
     start();
-    
+    score = 0;
 	}
 }
 
