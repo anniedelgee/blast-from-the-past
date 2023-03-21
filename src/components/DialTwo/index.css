@@ -1,5 +1,5 @@
-.iconimage {
-  background-image: url(/public/coinicon.png);
+.catchicon {
+  background-image: url(/public/catchicon.png);
   background-size: cover;
   background-position: center;
   width: 100px;
@@ -7,5 +7,5 @@
   border: none;
   cursor: pointer;
   position: absolute;
-  left: 100px;
+  left: 200px;
 }

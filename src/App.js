@@ -2,8 +2,10 @@
 import React, { useState } from 'react';
 import Canvas from "./components/Canvas";
 import CatchGame from "./components/CatchGame";
+import BallClick from "./components/BallClick";
 import DialOne from "./components/DialOne";
 import DialTwo from "./components/DialTwo";
+import DialThree from "./components/DialThree";
 import Computer from "./components/Computer/computer";
 import './App.css';
 import TodoList from './components/Calendar/TodoList'
@@ -16,7 +18,7 @@ let ThirdGameShown = false;
 function App() {
   const [showScreenSaver, setShowScreen] = useState(true);
   const [showSecondGame, setSecondGame] = useState(true);
-  const [showWrapper3, setShowWrapper3] = useState(true);
+  const [showThirdGame, setThirdGame,] = useState(true);
 
 
 
@@ -33,10 +35,21 @@ const button1Click = () => {
         setSecondGame(!showSecondGame);
         ScreenSaverShown = true;
         SecondGameShown = false;
-        return
+        return;
+      }
+      if(ThirdGameShown == true)
+      {
+        setShowScreen(!showScreenSaver);
+        setThirdGame(!showThirdGame);
+        ScreenSaverShown = true;
+        ThirdGameShown = false;
+        return;
       }
     }
   }
+
+
+
   const button2Click = () => {
     if(SecondGameShown == true)
     {
@@ -50,23 +63,59 @@ const button1Click = () => {
         setSecondGame(!showSecondGame);
         SecondGameShown = true;
         ScreenSaverShown = false;
+        return;
+      }
+      if(ThirdGameShown == true)
+      {
+        setSecondGame(!showSecondGame);
+        setThirdGame(!showThirdGame);
+        SecondGameShown = true;
+        ThirdGameShown = false;
+        return;
+      }
+    }
+  }
+
+  const button3Click = () => {
+    if(ThirdGameShown == true)
+    {
+      return;
+    }
+    else
+    {
+      if(ScreenSaverShown == true)
+      {
+        setShowScreen(!showScreenSaver);
+        setThirdGame(!showThirdGame);
+        ThirdGameShown = true;
+        ScreenSaverShown = false;
+        return
+      }
+      if(SecondGameShown == true)
+      {
+        setThirdGame(!showThirdGame);
+        setSecondGame(!showSecondGame);
+        ThirdGameShown = true;
+        SecondGameShown = false;
         return
       }
     }
   }
-  return (
+
+    return (
     <div>
   
       {showScreenSaver && <Canvas/>}
-      {!showSecondGame && <CatchGame />}
-      {!showWrapper3 && <CatchGame />}
+      {!showSecondGame && <BallClick/>}
+      {!showThirdGame && <CatchGame/>}
       <Computer></Computer>
 
-      <TodoList className="todo-list"/>
+
       <DialOne handleClick={button1Click} />
 
       <DialTwo handleClick={button2Click} />
-  
+
+      <DialThree handleClick={button3Click} />
     </div>
   );
 }
