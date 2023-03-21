@@ -9,6 +9,8 @@ import DialThree from "./components/DialThree";
 import Computer from "./components/Computer/computer";
 import TodoList from "./components/Calendar/TodoList";
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 

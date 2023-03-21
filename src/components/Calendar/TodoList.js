@@ -1,6 +1,9 @@
 import React, {useState} from 'react'
 import TodoForm from './TodoForm'
 import Todo from './Todo';
+import { Card } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './calendar.css';
 
 
 function TodoList() {
@@ -48,17 +51,37 @@ function TodoList() {
         setTodos(updatedTodos);
     };
 
+    //date function
+    const currentDate = new Date().toLocaleDateString();
 
   return (
-    <div>
-        <h1>What are your non-negotiables?</h1>
+    <Card style={{width: '26rem'}}>
+    <Card.Header>Today's Date: {currentDate}</Card.Header>
+    <Card.Title>
+        <center>Top 3 non-negotiables for today:</center>
+    </Card.Title>
         <TodoForm onSubmit={addTodo}/>
         <Todo 
         todos={todos}
         completeTodo={completeTodo}
         removeTodo={removeTodo}
         updateTodo={updateTodo}/>
-    </div>
+    <Card.Body>
+        <blockquote className='blockquote mb-0'>
+        <Card.Title>
+        Quote of the Day:
+    </Card.Title> 
+    <p>
+    {' '}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+            posuere erat a ante.{' '}
+    </p>
+    <footer className='blockquote-footer'>
+        Someone famous in <cite title='Source Title'>Source Title</cite>
+    </footer>
+    </blockquote>
+    </Card.Body>
+    </Card>
   );
 };
 
