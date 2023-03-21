@@ -17,12 +17,7 @@ function App() {
   const [showWrapper2, setShowWrapper2] = useState(true);
   const [showWrapper3, setShowWrapper3] = useState(true);
 
-  return (
-    <div className="todo-list">
-      <TodoList/>
-    </div>
-  );
-
+  
   const handleWrapperClick = () => {
     if(ScreenSaverShown == true)
     {
@@ -53,11 +48,16 @@ function App() {
       return;
     }
     
-
+    return (
+      <div className="todo-list">
+        <TodoList/>
+      </div>
+    );
+    
   };
-
-
-
+  
+  
+  
   return (
     <div>
   

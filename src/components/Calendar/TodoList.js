@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useState} from 'react'
 import TodoForm from './TodoForm'
+import Todo from './Todo';
 
 
 function TodoList() {
@@ -8,6 +9,7 @@ function TodoList() {
 
     //when you add a todo this makes sure that if no letters are typed it won't update the list
 
+    //add todo to list
     const addTodo = todo => {
         if(!todo.text || /^\s*$/.test(todo.text)){
             return
@@ -18,7 +20,35 @@ function TodoList() {
         // console.log(...todos);
     }; 
 
+    //edit todo
+    const updateTodo = (todoId, newValue ) => {
+        if (!newValue.text || /^\s*$/.test(newValue.text)){
+            return;
+        }
+        setTodos(prev => prev.map (item => (item.id === todoID ? newValue: item)));
     
+    };
+
+    //remove todo
+    const removeTodo = id => {
+        const removeArr = [...todos].filter (todo => todo.id !== id);
+
+        setTodos(removeArr);
+    };
+
+    //completed todo\
+    const completeTodo = id => {
+        let updatedTodos = todos.map (todo => {
+            if (todo.id === id) {
+                todo.isComplete = !todo.isComplete
+            }
+            return todo;
+
+        });
+        setTodos(updatedTodos);
+    };
+
+
   return (
     <div>
         <h1>What are your non-negotiables?</h1>
