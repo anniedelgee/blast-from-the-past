@@ -5,6 +5,7 @@ import Canvas2 from "./components/Canvas2";
 import Dial from "./components/Dial/dial";
 import Computer from "./components/Computer/computer";
 import './App.css';
+import TodoList from './components/Calendar/TodoList'
 
 let ScreenSaverShown = true;
 let SecondGameShown = true;
@@ -16,7 +17,11 @@ function App() {
   const [showWrapper2, setShowWrapper2] = useState(true);
   const [showWrapper3, setShowWrapper3] = useState(true);
 
- 
+  return (
+    <div className="todo-list">
+      <TodoList/>
+    </div>
+  );
 
   const handleWrapperClick = () => {
     if(ScreenSaverShown == true)
