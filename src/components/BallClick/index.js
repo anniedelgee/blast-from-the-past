@@ -14,7 +14,7 @@ class Sketch extends Component {
     var buttonY = 200;
     var distanceToButton = 0.0;
     var score = 0;
-    
+    var timer = 5;
 
     p.setup = () => {
     p.createCanvas(520, 380);
@@ -22,6 +22,15 @@ class Sketch extends Component {
 } 
 
 p.draw = () => {
+  p.background(220);
+  p.textAlign(p.CENTER, p.CENTER);
+  p.textSize(26);
+  p.text(timer, p.width/2, p.height/2);
+  if (p.frameCount % 60 == 0 && timer > 0) 
+  { 
+    timer --;
+  }
+  if (timer == 0) {
   p.background(82, 235, 138);
 	
 	if(gameState == "START"){
@@ -35,7 +44,7 @@ p.draw = () => {
 	if(gameState == "GAMEOVER"){
 		gameOver();
 	}
-
+  }
 } 
 
 
@@ -44,8 +53,8 @@ function start(){
 
 
   p.textSize(15);
-  p.text("HOVER OVER THE CIRCLE TO INCREASE YOUR SCORE ", p.width/2,90);
-  p.text("THE TIMER STOPS AT 1000 ", p.width/2,120);
+  p.text("Hover over the circle to increase your score", p.width/2,90);
+  p.text("Timer stops at 1000 ", p.width/2,120);
 	
 	p.text("Click To Play", p.width/2,p.height/2);
 	if(p.mouseIsPressed){
@@ -59,8 +68,8 @@ function gameOn(){
 	p.background(82, 235, 138);
   distanceToButton = p.dist(buttonX,buttonY,p.mouseX,p.mouseY);
   p.textSize(30);
-	p.text("SCORE: " + score,p.width/2,35);
-	p.text("TIMER: " + p.frameCount, p.width/2,75);
+	p.text("Score: " + score,p.width/2,35);
+	p.text("Timer: " + p.frameCount, p.width/2,75);
 
 	p.ellipse(buttonX,buttonY,50,50);	
 		
@@ -73,16 +82,19 @@ function gameOn(){
 	if(p.frameCount>=1000){  
 		gameState = "GAMEOVER";
 	}
-} // end gameOn
+} 
 
 function gameOver(){
-	p.background(128);
+	p.background(82, 235, 138);
   p.textSize(30);
-	p.text("SCORE: " + score,p.width/2,140);
-	p.text("GAME OVER",p.width/2,300);
+	p.text("Score: " + score,p.width/2,140);
+	p.text("Game over click to play again",p.width/2,300);
 	
-
-} // end game Over
+	if(p.mouseIsPressed){
+    start();
+    
+	}
+}
 
 
 
