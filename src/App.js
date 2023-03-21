@@ -62,7 +62,7 @@ const button1Click = () => {
       {!showWrapper3 && <CatchGame />}
       <Computer></Computer>
 
-       <TodoList className="todo-list">  <TodoList/>
+      <TodoList className="todo-list"/>
       <DialOne handleClick={button1Click} />
 
       <DialTwo handleClick={button2Click} />
@@ -70,6 +70,6 @@ const button1Click = () => {
     </div>
   );
 }
-
+}
 
 export default App;
