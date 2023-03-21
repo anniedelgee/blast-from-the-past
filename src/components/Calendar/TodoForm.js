@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-//import bootstrap for card component to wrap list
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 
@@ -11,7 +10,7 @@ function TodoForm(props) {
     const inputRef = useRef(null);
 
     useEffect(()=> {
-        inputRef.current.fous ()
+        inputRef.current.focus ()
     }); 
     
     //functionality for the button

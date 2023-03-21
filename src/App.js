@@ -5,8 +5,10 @@ import CatchGame from "./components/CatchGame";
 import DialOne from "./components/DialOne";
 import DialTwo from "./components/DialTwo";
 import Computer from "./components/Computer/computer";
+import TodoList from "./components/Calendar/TodoList";
 import './App.css';
-import TodoList from './components/Calendar/TodoList'
+
+
 
 let ScreenSaverShown = true;
 let SecondGameShown = false;
@@ -62,10 +64,10 @@ const button1Click = () => {
       {!showWrapper3 && <CatchGame />}
       <Computer></Computer>
 
-      <TodoList className="todo-list"/>
       <DialOne handleClick={button1Click} />
 
       <DialTwo handleClick={button2Click} />
+    <TodoList className="todo-list"></TodoList>
   
     </div>
   );
