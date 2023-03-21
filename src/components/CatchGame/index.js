@@ -51,11 +51,11 @@ function startScreen(){
 }
 
 function gameOn(){
-p.background(0)
-p.text("score = " + score, 30,20)
+p.background(82, 235, 138)
+p.text("Score = " + score, 80,30)
 p.ellipse(x,y,20,20)
 p.rectMode(p.CENTER)
-p.rect(p.mouseX,p.height-10,p.width / 4,30)
+p.rect(p.mouseX,p.height-10,60,30)
 y+= speed;
 if(y>p.height){
   screen =2
