@@ -53,7 +53,7 @@ const button1Click = () => {
         return
       }
     }
-
+  }
   return (
     <div>
   
@@ -69,7 +69,6 @@ const button1Click = () => {
   
     </div>
   );
-}
 }
 
 export default App;
