@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import p5 from 'p5';
-import './canvas.css';
+// import './canvas.css';
 class Sketch extends Component {
   componentDidMount() {
     this.canvas = new p5(this.sketch, this.wrapper);
