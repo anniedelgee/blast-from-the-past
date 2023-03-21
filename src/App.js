@@ -6,6 +6,7 @@ import DialOne from "./components/DialOne";
 import DialTwo from "./components/DialTwo";
 import Computer from "./components/Computer/computer";
 import './App.css';
+import TodoList from './components/Calendar/TodoList'
 
 let ScreenSaverShown = true;
 let SecondGameShown = false;
@@ -18,7 +19,8 @@ function App() {
   const [showWrapper3, setShowWrapper3] = useState(true);
 
 
-  const button1Click = () => {
+
+const button1Click = () => {
     if(ScreenSaverShown == true)
     {
       return;
@@ -51,14 +53,6 @@ function App() {
         return
       }
     }
-  }
-
- 
-
-
-
-
-
 
   return (
     <div>
@@ -68,6 +62,7 @@ function App() {
       {!showWrapper3 && <CatchGame />}
       <Computer></Computer>
 
+       <TodoList className="todo-list">  <TodoList/>
       <DialOne handleClick={button1Click} />
 
       <DialTwo handleClick={button2Click} />
