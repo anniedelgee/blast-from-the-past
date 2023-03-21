@@ -15,8 +15,8 @@ class Sketch extends Component {
     var yupdate = 1;
     let s = "Pick a game from the stickers at the side!";
     p.setup = () => {
-      // p.createCanvas(520, 380);
-      p.createCanvas(300, 210);
+
+      p.createCanvas(520, 380);
     };
     
  
@@ -29,7 +29,11 @@ class Sketch extends Component {
  
      p.textSize(26)
      p.fill(255);
-     p.text(s, 20, 160, 700, 100);
+     p.text(s, 20, 80, 700);
+     p.textSize(20)
+     p.text("Home icon to return here", 150, 180,700);
+     p.text("Click Flaming Ball for ball click game", 100, 210,700);
+     p.text("Click Basket Ball catch for ball catch game", 75, 240,700);
      if (x > p.width || x <= 0) {
        xupdate *= -1;
      }
