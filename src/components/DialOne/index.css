@@ -1,0 +1,11 @@
+.dialImage {
+  background-image: url(/public/dial.png);
+  background-size: cover;
+  background-position: center;
+  width: 100px;
+  height: 100px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+
+}

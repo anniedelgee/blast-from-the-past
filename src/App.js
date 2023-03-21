@@ -1,71 +1,72 @@
 
 import React, { useState } from 'react';
 import Canvas from "./components/Canvas";
-import Canvas2 from "./components/Canvas2";
-import Dial from "./components/Dial/dial";
+import CatchGame from "./components/CatchGame";
+import DialOne from "./components/DialOne";
+import DialTwo from "./components/DialTwo";
 import Computer from "./components/Computer/computer";
 import './App.css';
 import TodoList from './components/Calendar/TodoList'
 
 let ScreenSaverShown = true;
-let SecondGameShown = true;
-let ThirdGameShown = true;
+let SecondGameShown = false;
+let ThirdGameShown = false;
 
 
 function App() {
-  const [showScreenSaver, setShowWrapper] = useState(true);
-  const [showWrapper2, setShowWrapper2] = useState(true);
+  const [showScreenSaver, setShowScreen] = useState(true);
+  const [showSecondGame, setSecondGame] = useState(true);
   const [showWrapper3, setShowWrapper3] = useState(true);
 
-  
-  const handleWrapperClick = () => {
+
+
+const button1Click = () => {
     if(ScreenSaverShown == true)
     {
-      setShowWrapper(!showScreenSaver);
-      setShowWrapper2(!showWrapper2);
-      ScreenSaverShown = false;
-      SecondGameShown = true;
-      console.log("1");
       return;
-      
     }
+    else
+    {
+      if(SecondGameShown == true)
+      {
+        setShowScreen(!showScreenSaver);
+        setSecondGame(!showSecondGame);
+        ScreenSaverShown = true;
+        SecondGameShown = false;
+        return
+      }
+    }
+  }
+  const button2Click = () => {
     if(SecondGameShown == true)
     {
-      setShowWrapper2(!showWrapper2);
-      setShowWrapper3(!showWrapper3);
-      SecondGameShown = false;
-      ThirdGameShown = true;
-      console.log("2");
       return;
     }
-    if(ThirdGameShown == true)
+    else
     {
-      setShowWrapper3(!showWrapper3);
-      setShowWrapper(!showScreenSaver);
-      ThirdGameShown = false;
-      ScreenSaverShown = true;
-      console.log("3");
-      return;
+      if(ScreenSaverShown == true)
+      {
+        setShowScreen(!showScreenSaver);
+        setSecondGame(!showSecondGame);
+        SecondGameShown = true;
+        ScreenSaverShown = false;
+        return
+      }
     }
-    
-    return (
-      <div className="todo-list">
-        <TodoList/>
-      </div>
-    );
-    
-  };
-  
-  
-  
+
   return (
     <div>
   
-      {showScreenSaver && <Canvas />}
-      {!showWrapper2 && <Canvas2 />}
-      {!showWrapper3 && <Canvas2 />}
+      {showScreenSaver && <Canvas/>}
+      {!showSecondGame && <CatchGame />}
+      {!showWrapper3 && <CatchGame />}
       <Computer></Computer>
-      <Dial handleClick={handleWrapperClick} />
+
+       <TodoList className="todo-list">  <TodoList/>
+      <DialOne handleClick={button1Click} />
+
+      <DialTwo handleClick={button2Click} />
+  
     </div>
   );
 }
