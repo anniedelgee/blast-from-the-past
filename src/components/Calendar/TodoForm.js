@@ -19,7 +19,6 @@ function TodoForm(props) {
             id: Math.floor(Math.random ()* 1000),
             text:input
         });
-    }
 
     //clears the text
         setInput("")
