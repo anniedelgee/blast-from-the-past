@@ -7,8 +7,10 @@ import DialOne from "./components/DialOne";
 import DialTwo from "./components/DialTwo";
 import DialThree from "./components/DialThree";
 import Computer from "./components/Computer/computer";
+import TodoList from "./components/Calendar/TodoList";
 import './App.css';
-import TodoList from './components/Calendar/TodoList'
+
+
 
 let ScreenSaverShown = true;
 let SecondGameShown = false;
@@ -110,12 +112,14 @@ const button1Click = () => {
       {!showThirdGame && <CatchGame/>}
       <Computer></Computer>
 
-
+    
       <DialOne handleClick={button1Click} />
 
       <DialTwo handleClick={button2Click} />
 
       <DialThree handleClick={button3Click} />
+      
+      <TodoList className="todo-list"></TodoList>
     </div>
   );
 }
