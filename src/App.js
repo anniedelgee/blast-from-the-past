@@ -8,6 +8,7 @@ import DialTwo from "./components/DialTwo";
 import DialThree from "./components/DialThree";
 import Computer from "./components/Computer/computer";
 import TodoList from "./components/Calendar/TodoList";
+import Wall from "./components/Wall/wall";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -114,13 +115,13 @@ const button1Click = () => {
       {!showThirdGame && <CatchGame/>}
       <Computer></Computer>
 
-    
+   
       <DialOne handleClick={button1Click} />
 
       <DialTwo handleClick={button2Click} />
 
       <DialThree handleClick={button3Click} />
-      
+      <Wall></Wall>
       <TodoList className="todo-list"></TodoList>
     </div>
   );

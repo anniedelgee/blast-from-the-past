@@ -9,7 +9,7 @@ class Sketch extends Component {
 sketch = (p) => {
   var wall;
   p.preLoad = () => {
-    wall= loadImage("blast-from-the-past/public/background2.gif");
+    wall= p.loadImage("blast-from-the-past/public/background2.gif");
   }
   p.setup = () => {
     p.createCanvas(window.innerWidth, window.innerHeight);
@@ -20,7 +20,7 @@ sketch = (p) => {
 };
 render() {
   return (
-    <div class = "myclass" ref={(wrapper) => (this.wrapper = wrapper)}>
+    <div ref={(wrapper) => (this.wrapper = wrapper)}>
       {}
     </div>
   );
