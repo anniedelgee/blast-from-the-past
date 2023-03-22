@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Canvas from "./components/Canvas";
 import CatchGame from "./components/CatchGame";
 import BallClick from "./components/BallClick";
+import Message from "./components/Message";
 import DialOne from "./components/DialOne";
 import DialTwo from "./components/DialTwo";
 import DialThree from "./components/DialThree";
@@ -11,6 +12,7 @@ import TodoList from "./components/Calendar/TodoList";
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 
@@ -110,12 +112,12 @@ const button1Click = () => {
     return (
     <div>
   
-     {showScreenSaver && <Canvas className="hidden"/>}
-      {!showSecondGame && <BallClick className="hidden"/>}
-      {!showThirdGame && <CatchGame className="hidden"/>}
-      <Computer className="hidden"></Computer>
+     {showScreenSaver && <Canvas/>}
+      {!showSecondGame && <BallClick/>}
+      {!showThirdGame && <CatchGame/>}
+      <Computer></Computer>
 
-   
+      <Message></Message>
       <DialOne handleClick={button1Click} />
 
       <DialTwo handleClick={button2Click} />
@@ -123,7 +125,6 @@ const button1Click = () => {
       <DialThree handleClick={button3Click} />
 
       <TodoList className="todo-list"></TodoList>
-     
     </div>
   );
 }
