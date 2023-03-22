@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import Canvas from "./components/Canvas";
+import Snake from "./components/Snake";
 import CatchGame from "./components/CatchGame";
 import BallClick from "./components/BallClick";
 import Message from "./components/Message";
@@ -112,7 +113,7 @@ const button1Click = () => {
     return (
     <div>
   
-     {showScreenSaver && <Canvas/>}
+     {showScreenSaver && <Snake/>}
       {!showSecondGame && <BallClick/>}
       {!showThirdGame && <CatchGame/>}
       <Computer></Computer>
