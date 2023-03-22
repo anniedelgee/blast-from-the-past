@@ -1,9 +1,7 @@
-/* body {
-    background: linear-gradient(90deg,
-    rgba(48, 16, 255, 1) 0%,
-    rgba(100, 115, 255, 1) 100% 
-    );
-} */
+.card {
+
+  background: rgba(247, 239, 207, 0.941);
+}
 
 .todo-app {
     display: flex;
@@ -11,7 +9,7 @@
     justify-content: start;
     width: 520px;
     min-height: 600px;
-    background: #161a2b;
+    background: #7f89b5;
     text-align: center;
     margin: 128px auto;
     border-radius: 10px;
@@ -30,7 +28,7 @@
 }
 
 .todo-input::placeholder {
-    color: #e2e2e2;
+    color: #9a8e8e;
 }
 
 .todo-button {
@@ -41,8 +39,8 @@
     outline: none;
     background: linear-gradient(
         90deg,
-        rgba(93, 12, 255, 1) 0%,
-        rgba(155, 0, 250, 1) 100%
+        rgb(145, 238, 213) 0%,
+        rgb(80, 207, 173) 100%
       );
       color: #fff;
       text-transform: capitalize;
@@ -58,7 +56,7 @@
     rgba(20, 159, 255, 1) 0%,
     rgba(17, 122, 255, 1) 100%
   );
-  padding: 16px 22px;
+  padding: 4px;
 
 }
 
@@ -76,8 +74,9 @@
     margin: 4px auto;
     background: linear-gradient(
         90deg,
-        rgba(255, 118, 20, 1) 0%,
-        rgba(255, 84, 17, 1) 100%
+        
+        rgb(227, 140, 78) 0%,
+        #f9f385 100%
     );  
     padding: 16px;
     border-radius: 5px;
@@ -89,26 +88,18 @@
 .todo-row:nth-child(4n+1) {
     background: linear-gradient(
     90deg,
-    rgba(93, 12, 255, 1) 0%,
-    rgba(155, 0, 250, 1) 100%
+    #ba81b5 0%,
+    rgb(117, 39, 165) 100%
   );
 }
 
 .todo-row:nth-child(4n + 2) {
-    background: linear-gradient(
-      90deg,
-      rgba(255, 12, 241, 1) 0%,
-      rgba(250, 0, 135, 1) 100%
-    );
-  }
-
-  .todo-row:nth-child(4n + 3) {
-    background: linear-gradient(
-      90deg,
-      rgba(20, 159, 255, 1) 0%,
-      rgba(17, 122, 255, 1) 100%
-    );
-  }
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    #86ccbf 100%
+  );
+}
 
   .icons {
     display: flex;
@@ -125,3 +116,5 @@
   .edit-icon {
     color: #fff;
   }
+
+
