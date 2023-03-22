@@ -17,8 +17,8 @@ class Sketch extends Component {
     var timer = 5;
 
     p.setup = () => {
-    // p.createCanvas(520, 380);
-    p.createCanvas(400, 310);
+
+    p.createCanvas(520, 380);
     p.textAlign(p.CENTER);
 } 
 
@@ -105,7 +105,7 @@ function gameOver(){
 
   render() {
     return (
-      <div class = "myclass" ref={(wrapper) => (this.wrapper = wrapper)}>
+      <div className="screensaver" ref={(wrapper) => (this.wrapper = wrapper)}>
         {}
       </div>
     );
