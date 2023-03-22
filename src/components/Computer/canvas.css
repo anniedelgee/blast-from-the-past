@@ -1,5 +1,6 @@
 .computer{
     position: absolute;
-    left: 35%;
-    bottom: 5%;
+    left: 480px;
+    bottom: 40px;
+    z-index: 0;
 }

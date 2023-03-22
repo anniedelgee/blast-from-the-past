@@ -1,11 +1,6 @@
-.myclass{
-    /* position: absolute;
-   margin-top: 350px;
-   margin-left: 740px; */
-   position: fixed;
-   /* top: 50%;
-   left: 50%; */
-   
-   /* transform: translate(-53%, -95%); */
-   /* z-index: 10; */
+.screensaver{
+    position: absolute;
+    z-index: 1;
+    left: 520px;
+    bottom: 190px;
 }
