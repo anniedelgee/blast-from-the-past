@@ -1,9 +1,9 @@
-body {
+/* body {
     background: linear-gradient(90deg,
     rgba(48, 16, 255, 1) 0%,
     rgba(100, 115, 255, 1) 100% 
     );
-}
+} */
 
 .todo-app {
     display: flex;
@@ -24,7 +24,7 @@ body {
 }
 
 .todo-form {
-    margin-bottom: 32px;
+    margin-bottom: 30px;
     padding-left: 18px;
 
 }
@@ -34,7 +34,7 @@ body {
 }
 
 .todo-button {
-    padding: 8px;
+    padding: 4px;
     border: none;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
