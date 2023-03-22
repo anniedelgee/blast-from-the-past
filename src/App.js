@@ -8,6 +8,7 @@ import Message from "./components/Message";
 import DialOne from "./components/DialOne";
 import DialTwo from "./components/DialTwo";
 import DialThree from "./components/DialThree";
+import DialFour from "./components/DialFour";
 import Computer from "./components/Computer/computer";
 import TodoList from "./components/Calendar/TodoList";
 
@@ -20,6 +21,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 let ScreenSaverShown = true;
 let SecondGameShown = false;
 let ThirdGameShown = false;
+let FourthGameShown = false;
 
 
 
@@ -27,6 +29,7 @@ function App() {
   const [showScreenSaver, setShowScreen] = useState(true);
   const [showSecondGame, setSecondGame] = useState(true);
   const [showThirdGame, setThirdGame,] = useState(true);
+  const [showFourthGame, setFourthGame,] = useState(true);
 
 
 
@@ -51,6 +54,14 @@ const button1Click = () => {
         setThirdGame(!showThirdGame);
         ScreenSaverShown = true;
         ThirdGameShown = false;
+        return;
+      }
+      if(FourthGameShown == true)
+      {
+        setShowScreen(!showScreenSaver);
+        setFourthGame(!showFourthGame);
+        ScreenSaverShown = true;
+        FourthGameShown = false;
         return;
       }
     }
@@ -81,6 +92,14 @@ const button1Click = () => {
         ThirdGameShown = false;
         return;
       }
+      if(FourthGameShown == true)
+      {
+        setSecondGame(!showSecondGame);
+        setFourthGame(!showFourthGame);
+        SecondGameShown = true;
+        FourthGameShown = false;
+        return;
+      }
     }
   }
 
@@ -107,15 +126,61 @@ const button1Click = () => {
         SecondGameShown = false;
         return
       }
+      if(FourthGameShown == true)
+      {
+        setThirdGame(!showThirdGame);
+        setFourthGame(!showFourthGame);
+        ThirdGameShown = true;
+        FourthGameShown = false;
+        return;
+      }
     }
   }
+
+
+
+  const button4Click = () => {
+    if(FourthGameShown == true)
+    {
+      return;
+    }
+    else
+    {
+      if(ScreenSaverShown == true)
+      {
+        setShowScreen(!showScreenSaver);
+        setFourthGame(!showFourthGame);
+        ScreenSaverShown = false;
+        FourthGameShown = true;
+        return
+      }
+      if(SecondGameShown == true)
+      {
+        setSecondGame(!showSecondGame);
+        setFourthGame(!showFourthGame);
+        FourthGameShown = true;
+        SecondGameShown = false;
+        return
+      }
+      if(ThirdGameShown == true)
+      {
+        setThirdGame(!showThirdGame);
+        setFourthGame(!showFourthGame);
+        ThirdGameShown = false;
+        FourthGameShown = true;
+        return;
+      }
+    }
+  }
+
 
     return (
     <div>
   
-     {showScreenSaver && <Snake/>}
+     {showScreenSaver && <Canvas/>}
       {!showSecondGame && <BallClick/>}
       {!showThirdGame && <CatchGame/>}
+      {!showFourthGame && <Snake/>}
       <Computer></Computer>
 
       <Message></Message>
@@ -124,6 +189,8 @@ const button1Click = () => {
       <DialTwo handleClick={button2Click} />
 
       <DialThree handleClick={button3Click} />
+
+      <DialFour handleClick={button4Click}/>
 
       <TodoList className="todo-list"></TodoList>
     </div>

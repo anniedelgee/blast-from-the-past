@@ -14,7 +14,7 @@ class Sketch extends Component {
 
     p.setup = () => {
 
-      p.createCanvas(400, 310);
+      p.createCanvas(520, 380);
     s = new Snake();
     p.frameRate(10);
     pickLocation();
@@ -112,7 +112,7 @@ class Sketch extends Component {
 
   render() {
     return (
-      <div  ref={(wrapper) => (this.wrapper = wrapper)}>
+      <div  className="snake" ref={(wrapper) => (this.wrapper = wrapper)}>
         {}
       </div>
     );

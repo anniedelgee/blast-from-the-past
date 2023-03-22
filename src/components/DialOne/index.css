@@ -2,12 +2,13 @@
   background-image: url(/public/home.png);
   background-size: cover;
   background-position: center;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   border: none;
   cursor: pointer;
   position: absolute;
-
+  bottom: 70px;
+  left: 230px;
 }
 
 @media screen and (max-width: 1300px) {
