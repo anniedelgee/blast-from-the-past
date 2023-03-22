@@ -1,9 +1,8 @@
 body {
     background-image: url("/public/background2.gif");
-    /* background-repeat: no-repeat; */
-    /* background-size: 1920px 1080px;  */
-    background-size:cover;
-    /* position:fixed; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     
   }
 
