@@ -1,6 +1,6 @@
 .box
 {
-    visibility: hidden;
+    display: none;
     background-color: rgb(224, 134, 127);
 }
 .header
@@ -19,6 +19,6 @@
 @media screen and (max-width: 1300px) {
  
     .box{
-    visibility: visible;
+    display: block;
       }
 }
