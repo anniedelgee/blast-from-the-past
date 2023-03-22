@@ -80,18 +80,20 @@ function TodoList() {
     <Card.Title>
         <center>Top 3 non-negotiables for today:</center>
     </Card.Title>
+    <Card.Body className='text-center'>
         <TodoForm onSubmit={addTodo}/>
         <Todo 
         todos={todos}
         completeTodo={completeTodo}
         removeTodo={removeTodo}
         updateTodo={updateTodo}/>
+        </Card.Body>
     <Card.Body>
         <blockquote className='blockquote mb-0'>
         <Card.Title>
         Quote of the Day:
     </Card.Title> 
-    <p>
+    <p style = {{fontSize: '1rem'}}>
             {quote}
     </p>
     <footer className='blockquote-footer'>
