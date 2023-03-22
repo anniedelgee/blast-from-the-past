@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import p5 from 'p5';
 // import './canvas.css';
+
+let bg;//background image variable
+
 class Sketch extends Component {
   componentDidMount() {
     this.canvas = new p5(this.sketch, this.wrapper);
   }
-
-
+  
   sketch = (p) => {
-   
     p.setup = () => {
-
-      p. createCanvas(window.innerWidth, window.innerHeight);
+      p.createCanvas(window.innerWidth, window.innerHeight);
     };
     
     p.draw = () => {
+      
       p.translate(window.innerWidth/2, window.innerHeight/2);//cneter point is middle of screen
       p.rectMode(p.CENTER);//makes rectangle centre to center, not aligned by top left corner
       //largest top rectanlge
@@ -70,6 +71,8 @@ class Sketch extends Component {
       p.noStroke()
       p.fill('#28AD00');
       p.rect(230, 239, 20, 20, 1);
+      //background
+      p.background(bg);
  
     };
   };

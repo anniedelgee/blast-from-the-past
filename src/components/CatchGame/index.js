@@ -17,7 +17,8 @@ class Sketch extends Component {
     let timer = 5;
 
     p.setup = () => {
-      p.createCanvas(520, 380);
+      // p.createCanvas(520, 380);
+      p.createCanvas(400, 310);
     };
     p.draw = () => {
       p.background(220);
