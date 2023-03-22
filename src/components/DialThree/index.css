@@ -9,3 +9,10 @@
   position: absolute;
   left: 100px;
 }
+
+@media screen and (max-width: 1300px) {
+ 
+  .iconimage{
+  visibility: hidden;
+    }
+}

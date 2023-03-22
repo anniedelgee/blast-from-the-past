@@ -9,3 +9,10 @@
   position: absolute;
   left: 200px;
 }
+
+@media screen and (max-width: 1300px) {
+ 
+  .catchicon{
+  visibility: hidden;
+    }
+}

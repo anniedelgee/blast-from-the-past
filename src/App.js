@@ -110,10 +110,10 @@ const button1Click = () => {
     return (
     <div>
   
-     {showScreenSaver && <Canvas/>}
-      {!showSecondGame && <BallClick/>}
-      {!showThirdGame && <CatchGame/>}
-      <Computer className=""></Computer>
+     {showScreenSaver && <Canvas className="hidden"/>}
+      {!showSecondGame && <BallClick className="hidden"/>}
+      {!showThirdGame && <CatchGame className="hidden"/>}
+      <Computer className="hidden"></Computer>
 
    
       <DialOne handleClick={button1Click} />
