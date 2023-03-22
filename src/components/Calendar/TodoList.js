@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import TodoForm from './TodoForm'
 import Todo from './Todo';
 import { Card } from 'react-bootstrap';
@@ -54,8 +54,28 @@ function TodoList() {
     //date function
     const currentDate = new Date().toLocaleDateString();
 
+    //declaring quote state variable in useState hook:
+    const [quote, setQuote] = useState("");
+
+    //for author
+
+    const [author, setAuthor] = useState('');
+
+    //Getting the QoD
+
+    useEffect(() => {
+        fetch('https://api.quotable.io/random')
+        .then(response => response.json())
+        .then(data => {
+            setQuote(data.content);
+            setAuthor(data.author);
+
+        });
+    }, []);
+
   return (
-    <Card style={{width: '26rem'}}>
+    //card component
+    <Card style={{width: '26rem', float: "right", margin:'1rem'}}>
     <Card.Header>Today's Date: {currentDate}</Card.Header>
     <Card.Title>
         <center>Top 3 non-negotiables for today:</center>
@@ -72,12 +92,10 @@ function TodoList() {
         Quote of the Day:
     </Card.Title> 
     <p>
-    {' '}
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-            posuere erat a ante.{' '}
+            {quote}
     </p>
     <footer className='blockquote-footer'>
-        Someone famous in <cite title='Source Title'>Source Title</cite>
+        {author} <cite title='Source Title'></cite>
     </footer>
     </blockquote>
     </Card.Body>
