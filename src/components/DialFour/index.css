@@ -1,5 +1,5 @@
-.iconimage {
-  background-image: url(/public/ballicon.png);
+.snakeimage {
+  background-image: url(/public/snakeicon.png);
   background-size: cover;
   background-position: center;
   width: 75px;
@@ -7,13 +7,13 @@
   border: none;
   cursor: pointer;
   position: absolute;
-  left: 710px;
+  left: 620px;
   bottom: 70px;
 }
 
 @media screen and (max-width: 1300px) {
  
-  .iconimage{
+  .snakeimage{
   visibility: hidden;
     }
 }
