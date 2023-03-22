@@ -114,7 +114,7 @@ const button1Click = () => {
      {showScreenSaver && <Canvas/>}
       {!showSecondGame && <BallClick/>}
       {!showThirdGame && <CatchGame/>}
-      <Computer></Computer>
+      <Computer className=""></Computer>
 
    
       <DialOne handleClick={button1Click} />
