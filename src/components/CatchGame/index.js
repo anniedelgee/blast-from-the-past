@@ -100,7 +100,7 @@ function reset(){
 
   render() {
     return (
-      <div class = "myclass" ref={(wrapper) => (this.wrapper = wrapper)}>
+      <div className="screensaver" ref={(wrapper) => (this.wrapper = wrapper)}>
         {}
       </div>
     );
