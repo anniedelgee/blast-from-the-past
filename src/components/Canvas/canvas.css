@@ -3,9 +3,9 @@
    margin-top: 350px;
    margin-left: 740px; */
    position: fixed;
-   top: 50%;
-   left: 50%;
+   /* top: 50%;
+   left: 50%; */
    
-   transform: translate(-53%, -95%);
-   z-index: 10;
+   /* transform: translate(-53%, -95%); */
+   /* z-index: 10; */
 }
