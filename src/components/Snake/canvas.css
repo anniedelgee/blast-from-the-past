@@ -1,0 +1,12 @@
+.screensaver{
+    position: absolute;
+    z-index: 1;
+    left: 250px;
+    bottom: 190px;
+}
+@media screen and (max-width: 1300px) {
+ 
+    .screensaver{
+    visibility: hidden;
+      }
+}
