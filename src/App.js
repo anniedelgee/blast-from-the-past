@@ -8,6 +8,7 @@ import DialTwo from "./components/DialTwo";
 import DialThree from "./components/DialThree";
 import Computer from "./components/Computer/computer";
 import TodoList from "./components/Calendar/TodoList";
+import SpotifyPlaylistCard from './components/Spotify';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -114,7 +115,6 @@ const button1Click = () => {
       {!showSecondGame && <BallClick/>}
       {!showThirdGame && <CatchGame/>}
       <Computer className=""></Computer>
-
    
       <DialOne handleClick={button1Click} />
 
@@ -123,7 +123,10 @@ const button1Click = () => {
       <DialThree handleClick={button3Click} />
 
       <TodoList className="todo-list"></TodoList>
+      <SpotifyPlaylistCard playlistUrl="https://open.spotify.com/playlist/37i9dQZF1DX0011TOiJEnw?si=6057a5c763244ff0"></SpotifyPlaylistCard>
      
+  
+
     </div>
   );
 }

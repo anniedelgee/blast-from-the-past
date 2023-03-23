@@ -101,6 +101,14 @@
   );
 }
 
+.todo-row:nth-child(4n + 3) {
+  background: linear-gradient(
+    90deg,
+    #c0c0c0 0%,
+    #8b9de6 100%
+  );
+}
+
   .icons {
     display: flex;
     align-items: center;
