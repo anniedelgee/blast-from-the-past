@@ -2,7 +2,7 @@
 
 ## A Retro Inspired Desktop Application
 
-Blast to the Past is a desktop application that replicates the fun and excitment of some classic arcade style games. This paired with useful features like a to-do list that prioritises your non-negotiable tasks for the day, the quote of the day and an embedded customisable Spotify player, *Blast from the Past* will take you on a nostalgic journey to the golden age of arcade games. 
+Blast to the Past is a desktop application that replicates the fun and excitment of some classic arcade style games. This paired with useful features like a to-do list that prioritises your non-negotiable tasks for the day, the quote of the day and a Spotify player, *Blast from the Past* will take you on a nostalgic journey to the golden age of arcade games. 
 
 This application relies on various technologies including p5.js, React, web APIS, JavaScript, Bootstrap, HTML and CSS. 
 
@@ -25,7 +25,7 @@ This application relies on various technologies including p5.js, React, web APIS
 When you start the application, you will be presented with the retro-inspired 90's aesthetic User Interface. From here, you can navigate to different features of this application by using your cursor to hover over the main features on the page. 
 
 
-- Arcade Games: Blast from the Past offers two classic arcade games for you to play. You can easily switch between the games and save your highscore. 
+- Arcade Games: Blast from the Past offers three arcade games for you to play. You can easily switch between the games and save your highscore. 
 - To-do List: Add, edit, remove and strikethrough tasks to keep track of your daily activities.
 - Quote of the Day: Get a new inspirational quote everytime you refresh your page to help motivate and inspire you. 
 - Spotify web API: Customise your desktop music experience by connecting your spotify account and choosing favourite playlists to play while using the application. 
