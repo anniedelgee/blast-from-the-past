@@ -4,3 +4,9 @@
     bottom: 40px;
     z-index: 0;
 }
+@media screen and (max-width: 1300px) {
+ 
+    .computer{
+    visibility: hidden;
+      }
+}

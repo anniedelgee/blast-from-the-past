@@ -4,3 +4,9 @@
     left: 250px;
     bottom: 190px;
 }
+@media screen and (max-width: 1300px) {
+ 
+    .screensaver{
+    visibility: hidden;
+      }
+}

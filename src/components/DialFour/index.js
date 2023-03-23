@@ -1,13 +1,12 @@
 import React from 'react';
 import './index.css';
 
-function DialThree(props) {
-  
+function DialFour(props) {
   return (
-    <div className="iconimage" onClick={props.handleClick}>
+    <div className="snakeimage" onClick={props.handleClick}>
       {/* Add your Dial component code here */}
     </div>
   );
 }
 
-export default DialThree;
+export default DialFour;
