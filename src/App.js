@@ -11,6 +11,7 @@ import DialThree from "./components/DialThree";
 import DialFour from "./components/DialFour";
 import Computer from "./components/Computer/computer";
 import TodoList from "./components/Calendar/TodoList";
+import SpotifyPlaylistCard from './components/Spotify';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -180,10 +181,14 @@ const button1Click = () => {
      {showScreenSaver && <Canvas/>}
       {!showSecondGame && <BallClick/>}
       {!showThirdGame && <CatchGame/>}
+
+   
+
       {!showFourthGame && <Snake/>}
       <Computer></Computer>
 
       <Message></Message>
+
       <DialOne handleClick={button1Click} />
 
       <DialTwo handleClick={button2Click} />
@@ -193,6 +198,10 @@ const button1Click = () => {
       <DialFour handleClick={button4Click}/>
 
       <TodoList className="todo-list"></TodoList>
+
+      <SpotifyPlaylistCard playlistUrl="https://open.spotify.com/playlist/37i9dQZF1DX0011TOiJEnw?si=6057a5c763244ff0"></SpotifyPlaylistCard>
+     
+
     </div>
   );
 }
