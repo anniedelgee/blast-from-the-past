@@ -1,19 +1,11 @@
 .card {
 
-  background: rgba(247, 239, 207, 0.941);
+  background: #f2eecb;
 }
 
-.todo-app {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    width: 520px;
-    min-height: 600px;
-    background: #7f89b5;
-    text-align: center;
-    margin: 128px auto;
-    border-radius: 10px;
-    padding-bottom: 32px;
+.list {
+  margin-top: 5px;
+  margin-left: 20px;
 }
 
 .complete {
@@ -22,8 +14,8 @@
 }
 
 .todo-form {
-    margin-bottom: 30px;
-    padding-left: 18px;
+    margin-bottom: 10px;
+    padding-left: 22px;
 
 }
 
@@ -34,14 +26,11 @@
 .todo-button {
     padding: 4px;
     border: none;
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 3.5px 3.5px 0;
     cursor: pointer;
     outline: none;
-    background: linear-gradient(
-        90deg,
-        rgb(145, 238, 213) 0%,
-        rgb(80, 207, 173) 100%
-      );
+    background: 
+        rgb(80, 207, 173) 100%;
       color: #fff;
       text-transform: capitalize;
 }
@@ -60,25 +49,20 @@
 
 }
 
-
-.todo-container {
+/* .todo-container {
     display: flex;
     flex-direction: row;
     position: relative;
-}
+} */
 
 .todo-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 4px auto;
-    background: linear-gradient(
-        90deg,
-        
-        rgb(227, 140, 78) 0%,
-        #f9f385 100%
-    );  
-    padding: 16px;
+    margin: 2px auto;
+    background: 
+        #f9f385 100%;
+    padding: 8px;
     border-radius: 5px;
     width: 90%;
 }
@@ -86,19 +70,13 @@
 /*styling for each box added to list, different colour for each*/
 
 .todo-row:nth-child(4n+1) {
-    background: linear-gradient(
-    90deg,
-    #ba81b5 0%,
-    rgb(117, 39, 165) 100%
-  );
+    background:
+    #ba81b5 
 }
 
 .todo-row:nth-child(4n + 2) {
-  background: linear-gradient(
-    90deg,
-    rgba(20, 159, 255, 1) 0%,
-    #86ccbf 100%
-  );
+  background:
+    #86ccbf 100%;
 }
 
 .todo-row:nth-child(4n + 3) {
@@ -126,3 +104,13 @@
   }
 
 
+  @media screen and (max-width: 1300px) {
+    .card{
+       right: 28px;
+      
+    }
+    .list{
+      margin-top: -3px;
+    }
+   
+   }
