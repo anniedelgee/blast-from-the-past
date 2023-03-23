@@ -35,9 +35,20 @@ When you start the application, you will be presented with the retro-inspired 90
 ## Screenshots:
 
 
-## Link: 
+## Link to Deployed App:
+
+https://euphonious-dasik-49e852.netlify.app/
 
 ## Credits: 
 
 This application was created by Annie George, Josh Williams and Mariana Pritchard as part of a project for Front-End Web Development Bootcamp. It uses open source software (p5.js, React, Bootstrap, APIs, etc ). Thank you to all the contributors who have made these tools and technologies available to use. 
+
+A special thanks to Daniel Shiffman for his boundless energy and commitment to the p5js community. Also, Rune Madse's "programming design Systems" will be a reference for many projects to come.
+
+Daniel Shiffman's Coding Train: https://www.youtube.com/@TheCodingTrain 
+Rune Madsen's "Porgramming Design Systems": https://programmingdesignsystems.com/shape/custom-shapes/index.html#custom-shapes-pANLh0l
+
+Additionally, Brian Codex's work was extremely helpful with getting some of our UI features functional
+BrianCodex/ Brian Designs on Youtube. https://github.com/briancodex/react-todo-app-v1
+
 Lastly, a huge thank you to our instructor and our very supporting TA's, without your help, motivation, encouragement and belief in our hidden coding abilities we would not be where we are today. 
