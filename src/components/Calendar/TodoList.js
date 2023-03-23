@@ -75,19 +75,19 @@ function TodoList() {
 
   return (
     //card component
-    <Card style={{width: '26rem', float: "right", margin:'1rem'}}>
+    <Card style={{width: '26rem', float: "right", margin:'1.5rem'}}>
     <Card.Header>Today's Date: {currentDate}</Card.Header>
-    <Card.Title>
-        <center>Top 3 non-negotiables for today:</center>
+    <Card.Title className='list'>
+        3 Non-Negotiables for Today:
     </Card.Title>
-    <Card.Body className='text-center'>
+    {/* <Card.Body className='text-center'> */}
         <TodoForm onSubmit={addTodo}/>
         <Todo 
         todos={todos}
         completeTodo={completeTodo}
         removeTodo={removeTodo}
         updateTodo={updateTodo}/>
-        </Card.Body>
+        {/* </Card.Body> */}
     <Card.Body>
         <blockquote className='blockquote mb-0'>
         <Card.Title>
