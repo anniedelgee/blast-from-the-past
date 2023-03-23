@@ -34,6 +34,10 @@ When you start the application, you will be presented with the retro-inspired 90
 
 ## Screenshots:
 
+## Full Page Screenshot
+![Webpage Screenshot](public/fullscreen.png)
+### Smallest Screen-size Screenshot
+![Small Screen Webpage Screenshot](public/small.png)
 
 ## Link to Deployed App:
 
